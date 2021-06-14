@@ -28,26 +28,31 @@ import './custom.css'
 
 //const ENDPOINT = "https://e-councilhr.azurewebsites.net"
 
-const WebChat = ({ className, onFetchToken, store, token, /* handleFormDialogOpen */ }) => {
+const WebChat = ({ className, onFetchToken, store, token, handleSwitchWhenLanguageIsChosen }) => {
 
   const directLine = useMemo(() => createDirectLine({ token }), [token]);
   // We are adding a new middleware to handle card action
-  /* const cardActionMiddleware = () => next => async ({ cardAction, getSignInUrl }) => {
+  const cardActionMiddleware = () => next => async ({ cardAction, getSignInUrl }) => {
     const { type, value } = cardAction;
 
-    console.log('cardAction', cardAction)
-    console.log('getSignInUrl', getSignInUrl)
+    // console.log('cardAction', cardAction)
+    // console.log('getSignInUrl', getSignInUrl)
 
-    if (type === 'postBack' && value.url) {
-      //console.log('openUrl: ', type)
-      //console.log('supportteam: ', value)
+    if (type === 'imBack' && value === 'English') {
+      console.log('openUrl: ', type)
+      console.log('supportteam: ', value)
 
-      handleFormDialogOpen(value.url)
+      handleSwitchWhenLanguageIsChosen('right')
     }
-    else {
-      return next({ cardAction, getSignInUrl });
+    else if (type === 'imBack' && value === 'العربية') {
+      console.log('openUrl: ', type)
+      console.log('supportteam: ', value)
+
+      handleSwitchWhenLanguageIsChosen('left')
     }
-  } */
+
+    return next({ cardAction, getSignInUrl });
+  }
 
   //const [language, setLanguage] = useState(""); 
   //.webchat--css-iyfsm-rctxl4.webchat__stacked-layout.webchat__stacked-layout--from-user .webchat__stacked-layout__message-row
@@ -99,8 +104,8 @@ const WebChat = ({ className, onFetchToken, store, token, /* handleFormDialogOpe
       directLine={directLine}
       store={store}
       styleSet={styleSet}
-    //adaptiveCardsPackage={adaptiveCardsPackage}
-    //cardActionMiddleware={cardActionMiddleware}
+      //adaptiveCardsPackage={adaptiveCardsPackage}
+      cardActionMiddleware={cardActionMiddleware}
     />
   ) : (
     <div className={`${className || ''} connect-spinner`}>

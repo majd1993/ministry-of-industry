@@ -136,6 +136,10 @@ const MinimizableWebChat = (props) => {
     setSide(side === 'left' ? 'right' : 'left');
   }, [setSide, side]);
 
+  const handleSwitchWhenLanguageIsChosen = (alignment) => {
+    console.log('alignment', alignment)
+    setSide(alignment);
+  }
   // TODO: [P2] Currently, we cannot unmount Web Chat from DOM when it is minimized.
   //       Today, if we unmount it, Web Chat will call disconnect on DirectLineJS object.
   //       When minimized, we still want to maintain that connection while the UI is gone.
@@ -208,7 +212,7 @@ const MinimizableWebChat = (props) => {
             store={store}
             styleSet={styleSet}
             token={token}
-          //handleFormDialogOpen={props.handleFormDialogOpen}
+            handleSwitchWhenLanguageIsChosen={handleSwitchWhenLanguageIsChosen}
           />
         </div>
       )}
