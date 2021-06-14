@@ -10,6 +10,7 @@ import IconButton from '@material-ui/core/IconButton';
 import WebChat from './WebChat';
 
 import AvatarIcon from './avatar.png';
+import MinimizeIcon from './minimizeIcon.png';
 
 import './fabric-icons-inline.css';
 import './MinimizableWebChat.css';
@@ -42,6 +43,15 @@ const useStyles = makeStyles((theme) => ({
     width: '55px',
     height: '55px',
     margin: '0px 10px 0px 10px',
+  },
+  minimizeIcon: {
+    width: '55px',
+    height: '55px',
+    margin: '0px 10px 0px 10px',
+    position: 'absolute',
+    zIndex: '4500',
+    bottom: '50px',
+    right: '30px'
   },
 }));
 
@@ -84,7 +94,7 @@ const MinimizableWebChat = (props) => {
 
   const [loaded, setLoaded] = useState(false);
   const [minimized, setMinimized] = useState(true);
-  const [newMessage, setNewMessage] = useState(false);
+  const [/* newMessage */, setNewMessage] = useState(false);
   const [side, setSide] = useState('right');
   const [token, setToken] = useState();
 
@@ -134,10 +144,17 @@ const MinimizableWebChat = (props) => {
   return (
     <div className="minimizable-web-chat">
       {minimized && (
-        <button className="maximize" onClick={handleMaximizeButtonClick}>
+        <img
+          src={MinimizeIcon}
+          alt={''}
+          className={classes.minimizeIcon}
+          style={{}}
+          onClick={handleMaximizeButtonClick}
+        />
+        /* <button className="maximize" onClick={handleMaximizeButtonClick}>
           <span className={token ? 'ms-Icon ms-Icon--MessageFill' : 'ms-Icon ms-Icon--Message'} />
           {newMessage && <span className="ms-Icon ms-Icon--CircleShapeSolid red-dot" />}
-        </button>
+        </button> */
       )}
       {loaded && (
         <div className={classNames(side === 'left' ? 'chat-box left' : 'chat-box right', minimized ? 'hide' : '')}>

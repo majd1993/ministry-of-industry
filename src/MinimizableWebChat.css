@@ -1,7 +1,7 @@
 .minimizable-web-chat > button.maximize {
-  background-color: #112D70;
+  background-color: #667CB1;
   border-radius: 50%;
-  border: 2px solid #112D70;
+  border: 2px solid #667CB1;
   bottom: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, .2);
   color: White;
@@ -102,3 +102,7 @@
 .minimizable-web-chat > .chat-box > .react-web-chat {
   flex: 1;
 } */
+
+.bgimg {
+  background-image: url('./minimizeIcon.png');
+}
