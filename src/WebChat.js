@@ -48,28 +48,28 @@ const WebChat = ({ className, onFetchToken, store, token, /* handleFormDialogOpe
       return next({ cardAction, getSignInUrl });
     }
   } */
-  
+
   //const [language, setLanguage] = useState(""); 
   //.webchat--css-iyfsm-rctxl4.webchat__stacked-layout.webchat__stacked-layout--from-user .webchat__stacked-layout__message-row
   //.webchat--css-iyfsm-rctxl4.webchat__stacked-layout .webchat__stacked-layout__message-row
-  
+
   const styleSet = useMemo(
     () =>
       createStyleSet({
         userAvatarBackgroundColor: 'rgb(105,105,105)',
         botAvatarBackgroundColor: 'rgba(193, 52, 52, 0.93)',
-        bubbleBackground: '#282E3E',
-        bubbleFromUserBackground: '#d4b678',
+        bubbleBackground: '#EEEEEE',
+        bubbleFromUserBackground: '#245BB2',
         botAvatarInitials: 'Bot',
         userAvatarInitials: 'User',
-        backgroundColor: '#ffffff',
-        bubbleFromUserBorderRadius: "8px",
-        bubbleBorderRadius: "8px",
-        bubbleTextColor: 'white',
+        backgroundColor: '#f5f5f5',
+        bubbleFromUserBorderRadius: "15px 15px 2px 15px",
+        bubbleBorderRadius: "15px 15px 15px 2px",
+        bubbleTextColor: '#070707',
         bubbleFromUserTextColor: "white",
-        suggestedActionBorderColor: '#d4b678',
+        suggestedActionBorderColor: '#245BB2',
         suggestedActionBorderRadius: "8px",
-        suggestedActionBackground: '#d4b678',
+        suggestedActionBackground: '#245BB2',
         suggestedActionDisabledTextColor: 'white',
         suggestedActionTextColor: "#ffffff",
         sendBoxTextColor: 'black',
@@ -99,8 +99,8 @@ const WebChat = ({ className, onFetchToken, store, token, /* handleFormDialogOpe
       directLine={directLine}
       store={store}
       styleSet={styleSet}
-      //adaptiveCardsPackage={adaptiveCardsPackage}
-      //cardActionMiddleware={cardActionMiddleware}
+    //adaptiveCardsPackage={adaptiveCardsPackage}
+    //cardActionMiddleware={cardActionMiddleware}
     />
   ) : (
     <div className={`${className || ''} connect-spinner`}>

@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/css/main.b72c7002.chunk.css",
+    "main.js": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/js/main.f8cc13ec.chunk.js",
+    "main.js.map": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/js/main.f8cc13ec.chunk.js.map",
+    "runtime-main.js": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/js/runtime-main.12f3a998.js",
+    "runtime-main.js.map": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/js/runtime-main.12f3a998.js.map",
+    "static/js/2.40225039.chunk.js": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/js/2.40225039.chunk.js",
+    "static/js/2.40225039.chunk.js.map": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/js/2.40225039.chunk.js.map",
+    "index.html": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/index.html",
+    "static/css/main.b72c7002.chunk.css.map": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/css/main.b72c7002.chunk.css.map",
+    "static/js/2.40225039.chunk.js.LICENSE.txt": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/js/2.40225039.chunk.js.LICENSE.txt",
+    "static/media/MoIAT.98d6c191.png": "/BotFramework-WebChat/06.recomposing-ui/a.minimizable-web-chat/static/media/MoIAT.98d6c191.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.12f3a998.js",
+    "static/js/2.40225039.chunk.js",
+    "static/css/main.b72c7002.chunk.css",
+    "static/js/main.f8cc13ec.chunk.js"
+  ]
+}

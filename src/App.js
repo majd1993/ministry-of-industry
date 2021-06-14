@@ -3,7 +3,7 @@ import MinimizableWebChat from './MinimizableWebChat';
 
 //import IFrameFromDialog from './iframeContainer'
 
-import DubaiChamberBg from './dubai-chamber-bg.png';
+import MoIATBG from './MoIAT.png';
 //import DubaiChamberBg2 from './dubai-chamber-bg-2.png';
 import './App.css';
 
@@ -55,7 +55,7 @@ class App extends React.Component {
           iFrameURL={this.state.iFrameURL}
           handleFormDialogClose={this.handleFormDialogClose}
         /> */}
-        {/* <img alt="product background" src={DubaiChamberBg} /> */}
+        <img alt="product background" src={MoIATBG} />
         <MinimizableWebChat /* handleFormDialogOpen={this.handleFormDialogOpen} */ />
       </div>
     )

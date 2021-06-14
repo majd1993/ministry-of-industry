@@ -1,13 +1,42 @@
 import classNames from 'classnames';
 import React, { useCallback, useMemo, useState } from 'react';
 import { createStore, createStyleSet } from 'botframework-webchat';
+import Typography from '@material-ui/core/Typography';
+import ListItem from '@material-ui/core/ListItem';
+import { makeStyles } from '@material-ui/core/styles';
 
 import WebChat from './WebChat';
 
 import './fabric-icons-inline.css';
 import './MinimizableWebChat.css';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+  },
+  title1: {
+    margin: '0px 0px 0px 20px',
+    fontFamily: 'Inter, sans-serif',
+    fontSize: '27px',
+    color: '#fffff',
+    fontWeight: '700',
+  },
+  title2: {
+    margin: '0px 0px 0px 20px',
+    fontFamily: 'Inter, sans-serif',
+    fontSize: '15px',
+    color: '#C2C2C2',
+    fontWeight: '400',
+  },
+  emptyMainTypography: {
+    flexGrow: 1,
+  },
+}));
+
+
 const MinimizableWebChat = (props) => {
+
+  const classes = useStyles();
 
   const store = useMemo(
     () =>
@@ -58,8 +87,7 @@ const MinimizableWebChat = (props) => {
         {
           method: 'GET',
           headers: {
-            'Authorization': 'BotConnector y9fwHmxuNj0.eF11NQzywccCKhSCk-5zJDsn-YtYlRkqoZ6iZ4Nf7js' //signup
-            //'Authorization': 'BotConnector CGxDt2v_6B4.mYfZwJxDayYUyID046_L3UiinqgOFSkvdhoU-Wn4I7s'   //login 
+            'Authorization': 'BotConnector KxH5mTB3KH0.GOS2JFASIiLQlZttpBQUsxBmHjn-SbtS73Q7gKlh8ZA',
           }
         });
       // 'Authorization', 'BotConnector ' + 'YugL9gop8Zk.SJVwc4Jheg5HadjeRyHDBfbVI8P19s_V3S5qzeUoMoM'
@@ -103,12 +131,28 @@ const MinimizableWebChat = (props) => {
         <div className={classNames(side === 'left' ? 'chat-box left' : 'chat-box right', minimized ? 'hide' : '')}>
           <header>
             <div className="filler" />
-            <button className="switch" onClick={handleSwitchButtonClick}>
-              <span className="ms-Icon ms-Icon--Switch" />
-            </button>
-            <button className="minimize" onClick={handleMinimizeButtonClick}>
-              <span className="ms-Icon ms-Icon--ChromeMinimize" />
-            </button>
+            <ListItem style={{ padding: '0px' }}>
+              {/* {React.createElement(
+                Icons['Adjust'], { className: classes.groupTitleLeftIcon },
+
+              )} */}
+
+              <div>
+                <Typography className={classes.title1} >
+                  {'Basic'}
+                </Typography>
+                <Typography className={classes.title2} >
+                  {'Your MoIAT digital assistant'}
+                </Typography>
+              </div>
+              <Typography className={classes.emptyMainTypography} ></Typography>
+              <button className="switch" onClick={handleSwitchButtonClick}>
+                <span className="ms-Icon ms-Icon--Switch" />
+              </button>
+              <button className="minimize" onClick={handleMinimizeButtonClick}>
+                <span className="ms-Icon ms-Icon--ChromeMinimize" />
+              </button>
+            </ListItem>
           </header>
           <WebChat
             className="react-web-chat"
@@ -116,7 +160,7 @@ const MinimizableWebChat = (props) => {
             store={store}
             styleSet={styleSet}
             token={token}
-            //handleFormDialogOpen={props.handleFormDialogOpen}
+          //handleFormDialogOpen={props.handleFormDialogOpen}
           />
         </div>
       )}
