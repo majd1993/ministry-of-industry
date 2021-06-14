@@ -67,11 +67,22 @@
   border: 2px solid #0b3b5d;
   border-radius: 2px;
 }
-.ac-adaptiveCard {
-  background: white;
+.webchat__adaptive-card-renderer {
+  background: white  !important;
   color: #878787 !important;
-  border-radius: 2px;
+  border-radius: 16px !important;
 }
+/* 
+.ac-container {
+  background: white  !important;
+  color: #878787 !important;
+  border-radius: 16px !important;
+}
+.ac-adaptiveCard {
+  background: white  !important;
+  color: #878787 !important;
+  border-radius: 16px !important;
+} */
 
 .ac-pushButton {
   color: #ffffff !important;

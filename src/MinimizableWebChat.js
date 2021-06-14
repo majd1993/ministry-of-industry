@@ -4,8 +4,12 @@ import { createStore, createStyleSet } from 'botframework-webchat';
 import Typography from '@material-ui/core/Typography';
 import ListItem from '@material-ui/core/ListItem';
 import { makeStyles } from '@material-ui/core/styles';
+import * as Icons from '@material-ui/icons/';
+import IconButton from '@material-ui/core/IconButton';
 
 import WebChat from './WebChat';
+
+import AvatarIcon from './avatar.png';
 
 import './fabric-icons-inline.css';
 import './MinimizableWebChat.css';
@@ -22,14 +26,22 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: '700',
   },
   title2: {
-    margin: '0px 0px 0px 20px',
+    margin: '5px 0px 5px 20px',
     fontFamily: 'Inter, sans-serif',
     fontSize: '15px',
-    color: '#C2C2C2',
+    color: '#b8b8b8', //'#C2C2C2',
     fontWeight: '400',
   },
   emptyMainTypography: {
     flexGrow: 1,
+  },
+  headerIconButton: {
+    padding: '10px 10px 10px 10px',
+  },
+  avatarIcon: {
+    width: '55px',
+    height: '55px',
+    margin: '0px 10px 0px 10px',
   },
 }));
 
@@ -130,28 +142,47 @@ const MinimizableWebChat = (props) => {
       {loaded && (
         <div className={classNames(side === 'left' ? 'chat-box left' : 'chat-box right', minimized ? 'hide' : '')}>
           <header>
-            <div className="filler" />
+            {/* <div className="filler" /> */}
             <ListItem style={{ padding: '0px' }}>
-              {/* {React.createElement(
-                Icons['Adjust'], { className: classes.groupTitleLeftIcon },
-
-              )} */}
-
               <div>
                 <Typography className={classes.title1} >
-                  {'Basic'}
+                  {'Wael'}
                 </Typography>
                 <Typography className={classes.title2} >
                   {'Your MoIAT digital assistant'}
                 </Typography>
               </div>
               <Typography className={classes.emptyMainTypography} ></Typography>
-              <button className="switch" onClick={handleSwitchButtonClick}>
+
+              <IconButton
+                onClick={handleMinimizeButtonClick}
+                className={classes.headerIconButton}
+              >
+                {React.createElement(
+                  Icons['Remove'], { className: classes.groupTitleLeftIcon },
+
+                )}
+              </IconButton>
+              <IconButton
+                onClick={handleSwitchButtonClick}
+                className={classes.headerIconButton}
+              >
+                {React.createElement(
+                  Icons['SwapHoriz'], { className: classes.groupTitleLeftIcon },
+
+                )}
+              </IconButton>
+              {/* <button className="switch" onClick={handleSwitchButtonClick}>
                 <span className="ms-Icon ms-Icon--Switch" />
               </button>
               <button className="minimize" onClick={handleMinimizeButtonClick}>
                 <span className="ms-Icon ms-Icon--ChromeMinimize" />
-              </button>
+              </button> */}
+              <img
+                src={AvatarIcon}
+                alt={''}
+                className={classes.avatarIcon}
+              />
             </ListItem>
           </header>
           <WebChat

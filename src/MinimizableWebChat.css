@@ -38,14 +38,14 @@
 .minimizable-web-chat > .chat-box {
   background-color: rgba(255, 255, 255, .8);
   backdrop-filter: blur(10px);
-  border-radius: 1px;
+  border-radius: 2px;
   box-shadow: 0 0 20px rgba(0, 0, 0, .2);
   border: 1px solid #112D70;
   bottom: 20px;
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  min-width: 320px;
+  min-width: 400px;
   position: fixed;
   top: 20px;
   width: 30%;
@@ -65,32 +65,40 @@
 
 .minimizable-web-chat > .chat-box > header {
   background-color: #ffffff;/* head of chat box */
-  height: 80px;
+  height: 100px;
   display: flex;
 }
 
-.minimizable-web-chat > .chat-box > header > .filler {
-  flex: 0 10000 100%;
+/* .minimize {
+  background-color: Transparent !important;
 }
 
-.minimizable-web-chat > .chat-box > header > button {
+.switch {
+  background-color: Transparent !important;
+} */
+/* .minimizable-web-chat > .chat-box > header > .filler {
+  flex: 0 10000 100%;
+} */
+
+/* .minimizable-web-chat > .chat-box > header > button {
   width: 40px;
   height: 40px;
   background-color: Transparent;
   border: 0;
-  color: #ffffff;
+  color: #112D70 ;
   outline: 0;
-}
+} */
 
-.minimizable-web-chat > .chat-box > header > button:focus:not(:active),
+/* .minimizable-web-chat > .chat-box > header > button:focus:not(:active),
 .minimizable-web-chat > .chat-box > header > button:hover:not(:active) {
-  color: #ffffff;
+  color: #112D70;
+
 }
 
 .minimizable-web-chat > .chat-box > header > button:focus:active {
-  color: #ffffff;
+  color: #112D70 !important;
 }
 
 .minimizable-web-chat > .chat-box > .react-web-chat {
   flex: 1;
-}
+} */
