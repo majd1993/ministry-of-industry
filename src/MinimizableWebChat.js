@@ -53,9 +53,9 @@ const useStyles = makeStyles((theme) => ({
     right: '50px',
   },
   messageCloudHeader: {
-    margin: '35px 0px 10px 0px ',
-    width: '80px',
-    height: '80px',
+    margin: '35px 0px 10px 20px ',
+    width: '60px',
+    height: '60px',
   },
 }));
 
@@ -198,7 +198,7 @@ const MinimizableWebChat = (props) => {
               />
               <IconButton
                 onClick={handleMinimizeButtonClick}
-                style={{ margin: '-50px 0px 0px 130px' }}
+                style={{ margin: '-50px 0px 0px 100px' }}
               >
                 {React.createElement(
                   Icons['Close'], { style: { color: '#ffffff',fontSize:'24px'} }//{ className: classes.groupTitleLeftIcon },
