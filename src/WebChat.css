@@ -3,109 +3,135 @@
 }
 
 ::-webkit-scrollbar {
-/*   width: 10px;*/ 
- display: none;
+  width: 8px;
+  /* display: none; */
 }
 
 /* Track */
+
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 3px;
+  /* box-shadow: inset 0 0 5px grey; */
+  border-radius: 0px;
 }
- 
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-  background: #0b3b5d; 
-  border-radius: 10px;
+  background: #282E3E;
+  border-radius: 0px;
 }
 
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #0a314d; 
+  background: #0a314d;
 }
 
 /* .ac-textBlock>p {
   color: white;
 }
  */
+
 .connect-spinner {
   display: flex;
   margin: auto;
   text-align: center;
 }
 
-.connect-spinner > .content {
+.connect-spinner>.content {
   margin: auto;
 }
 
-.connect-spinner > .content > .icon {
+.connect-spinner>.content>.icon {
   font-size: 64px;
 }
 
-.roula
-  .webchat__stacked-layout.webchat__stacked-layout--from-user
-  .webchat__stacked-layout__attachment-row,
-.roula
-  .webchat__stacked-layout.webchat__stacked-layout--from-user
-  .webchat__stacked-layout__main,
-.roula
-  .webchat__stacked-layout.webchat__stacked-layout--from-user
-  .webchat__stacked-layout__message-row,
-.roula
-  .webchat__stacked-layout.webchat__stacked-layout--from-user
-  .webchat__stacked-layout__status {
+.roula .webchat__stacked-layout.webchat__stacked-layout--from-user .webchat__stacked-layout__attachment-row, .roula .webchat__stacked-layout.webchat__stacked-layout--from-user .webchat__stacked-layout__main, .roula .webchat__stacked-layout.webchat__stacked-layout--from-user .webchat__stacked-layout__message-row, .roula .webchat__stacked-layout.webchat__stacked-layout--from-user .webchat__stacked-layout__status {
   flex-direction: row !important;
 }
-.roula .webchat__stacked-layout .webchat__stacked-layout__attachment-row,
-.roula .webchat__stacked-layout .webchat__stacked-layout__main,
-.roula .webchat__stacked-layout .webchat__stacked-layout__message-row,
-.roula .webchat__stacked-layout .webchat__stacked-layout__status {
+
+.roula .webchat__stacked-layout .webchat__stacked-layout__attachment-row, .roula .webchat__stacked-layout .webchat__stacked-layout__main, .roula .webchat__stacked-layout .webchat__stacked-layout__message-row, .roula .webchat__stacked-layout .webchat__stacked-layout__status {
   flex-direction: row-reverse !important;
   text-align: right !important;
 }
-.webchat__adaptive-card-renderer{
+
+.webchat__adaptive-card-renderer {
   border: 2px solid #0b3b5d;
   border-radius: 2px;
 }
+
 .webchat__adaptive-card-renderer {
-  background: white  !important;
+  background: white !important;
   color: #878787 !important;
   border-radius: 16px !important;
 }
-/* 
+
 .ac-container {
-  background: white  !important;
+  background: white !important;
   color: #878787 !important;
   border-radius: 16px !important;
 }
+
 .ac-adaptiveCard {
-  background: white  !important;
+  background: white !important;
   color: #878787 !important;
   border-radius: 16px !important;
-} */
+}
+
+.roula .ac-pushButton {
+  /* Arabic */
+  color: #3e9bf2 !important;
+  display: block !important;
+  font-size: 14px;
+  /* background: #245BB2 !important; */
+  border: 0px solid #245BB2 !important;
+  text-align: right !important;
+  padding: 5px;
+  /* border-radius: 8px !important; */
+}
 
 .ac-pushButton {
-  color: #ffffff !important;
-  background: #245BB2 !important;
-  border: 1px solid #245BB2 !important;
-  border-radius: 8px !important;
+  /* English */
+  color: #3e9bf2 !important;
+  /* #a8b4c9 */
+  justify-content: start !important;
+  font-size: 11px;
+  /* background: #245BB2 !important; */
+  border: 0px solid #245BB2 !important;
+  padding: 5px;
+  /* border-radius: 8px !important; */
+}
+
+.ac-actionSet {
+  text-align: right;
 }
 
 .ac-textBlock {
   font-size: 16px!important;
-  margin-top: 1px ;
+  margin-top: 1px;
   color: #0b3b5d !important;
 }
 
 .ac-input {
   background: white;
-  padding-left: 5px !important ;
+  padding-left: 5px !important;
 }
-.ac-textInput{
-  height:25px !important;
+
+.ac-textInput {
+  height: 25px !important;
   border-radius: 4px !important;
 }
 
-.react-film__flipper__body{
+.react-film__flipper__body {
   background: #0b3b5d !important;
+}
+
+/* .webchat__icon-button {
+  display: none !important;
+} */
+
+.webchat__send-box-text-box {
+  margin-left: -40px !important;
+  height: 100% !important;
+  background-color: #ffffff;
 }

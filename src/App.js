@@ -55,7 +55,7 @@ class App extends React.Component {
           iFrameURL={this.state.iFrameURL}
           handleFormDialogClose={this.handleFormDialogClose}
         /> */}
-        <img alt="product background" src={MoIATBG} />
+        <img className="bg" alt="product background" src={MoIATBG} />
         <MinimizableWebChat /* handleFormDialogOpen={this.handleFormDialogOpen} */ />
       </div>
     )

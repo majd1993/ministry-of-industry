@@ -1,9 +1,10 @@
 // import React, { useEffect, useMemo } from 'react';
 import ReactWebChat, { createDirectLine, createStyleSet } from 'botframework-webchat';
-import React, { /* useState,  */useEffect, useMemo } from "react";
-//import socketIOClient from "socket.io-client";
+import React, { useState, useEffect, useMemo } from "react";
+// import socketIOClient from "socket.io-client";
 import './WebChat.css';
 import './custom.css'
+
 
 //import * as adaptiveCardsPackage from 'adaptivecards';
 
@@ -26,9 +27,9 @@ import './custom.css'
   }
 }; */
 
-//const ENDPOINT = "https://e-councilhr.azurewebsites.net"
+// const ENDPOINT = "https://ministryofindustry.azurewebsites.net/"
 
-const WebChat = ({ className, onFetchToken, store, token, handleSwitchWhenLanguageIsChosen }) => {
+const WebChat = ({ className, onFetchToken, store, token, /* handleSwitchWhenLanguageIsChosen */ }) => {
 
   const directLine = useMemo(() => createDirectLine({ token }), [token]);
   // We are adding a new middleware to handle card action
@@ -42,13 +43,15 @@ const WebChat = ({ className, onFetchToken, store, token, handleSwitchWhenLangua
       console.log('openUrl: ', type)
       console.log('supportteam: ', value)
 
-      handleSwitchWhenLanguageIsChosen('right')
+      setResponse('English');
+      //handleSwitchWhenLanguageIsChosen('right')
     }
     else if (type === 'imBack' && value === 'العربية') {
       console.log('openUrl: ', type)
       console.log('supportteam: ', value)
 
-      handleSwitchWhenLanguageIsChosen('left')
+      setResponse('العربية');
+      //handleSwitchWhenLanguageIsChosen('left')
     }
 
     return next({ cardAction, getSignInUrl });
@@ -63,27 +66,34 @@ const WebChat = ({ className, onFetchToken, store, token, handleSwitchWhenLangua
       createStyleSet({
         userAvatarBackgroundColor: 'rgb(105,105,105)',
         botAvatarBackgroundColor: 'rgba(193, 52, 52, 0.93)',
-        bubbleBackground: '#EEEEEE',
-        bubbleFromUserBackground: '#245BB2',
+        bubbleBackground: '#E0E0E0',
+        bubbleFromUserBackground: '#141726',
         botAvatarInitials: 'Bot',
         userAvatarInitials: 'User',
         backgroundColor: '#f5f5f5',
-        bubbleFromUserBorderRadius: "15px 15px 2px 15px",
-        bubbleBorderRadius: "15px 15px 15px 2px",
+        bubbleBorderRadius: "20px 20px 20px 20px",
+        bubbleFromUserBorderRadius: "20px 20px 20px 20px",
         bubbleTextColor: '#070707',
         bubbleFromUserTextColor: "white",
-        suggestedActionBorderColor: '#245BB2',
-        suggestedActionBorderRadius: "8px",
-        suggestedActionBackground: '#245BB2',
+        suggestedActionBorderColor: '#D4B678',
+        suggestedActionBorderRadius: "4px",
+        suggestedActionBackground: '#D4B678',
         suggestedActionDisabledTextColor: 'white',
         suggestedActionTextColor: "#ffffff",
-        sendBoxTextColor: 'black',
+        sendBoxTextColor: '#000000',
         avatarSize: 40,
       }),
     []
   );
-  /* const [response, setResponse] = useState("");
-  useEffect(() => {
+
+  /* styleSet.textContent = {
+    ...styleSet.textContent,
+    fontFamily: "'Comic Sans MS', 'Arial', sans-serif",
+    fontWeight: 'bold'
+  } */
+
+  const [response, setResponse] = useState('English');
+  /* useEffect(() => {
     const socket = socketIOClient(ENDPOINT);
     socket.on("language", data => {
       console.log("wessel")
@@ -97,15 +107,18 @@ const WebChat = ({ className, onFetchToken, store, token, handleSwitchWhenLangua
     onFetchToken();
   }, [onFetchToken]);
 
+
+  console.log('response', response)
+
   return token ? (
     //<ReactWebChat className={`${className || ''} web-chat ${response.language!=='English'?'roula':''}`} directLine={directLine} store={store} styleSet={styleSet} /> // left to right
     <ReactWebChat
-      className={`${className || ''} web-chat `}
+      className={`${className || ''} web-chat ${response !== 'English' ? 'roula' : ''}`}
       directLine={directLine}
       store={store}
       styleSet={styleSet}
-      //adaptiveCardsPackage={adaptiveCardsPackage}
-      cardActionMiddleware={cardActionMiddleware}
+    //adaptiveCardsPackage={adaptiveCardsPackage}
+    cardActionMiddleware={cardActionMiddleware}
     />
   ) : (
     <div className={`${className || ''} connect-spinner`}>

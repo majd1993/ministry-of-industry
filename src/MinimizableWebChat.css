@@ -1,4 +1,4 @@
-.minimizable-web-chat > button.maximize {
+.minimizable-web-chat>button.maximize {
   background-color: #667CB1;
   border-radius: 50%;
   border: 2px solid #667CB1;
@@ -14,7 +14,7 @@
   width: 64px;
 }
 
-.minimizable-web-chat > button.maximize > .red-dot {
+.minimizable-web-chat>button.maximize>.red-dot {
   color: #375497;
   font-size: 14px;
   position: absolute;
@@ -22,20 +22,19 @@
   top: 12px;
 }
 
-.minimizable-web-chat > button.maximize:focus:not(:active),
-.minimizable-web-chat > button.maximize:hover:not(:active) {
+.minimizable-web-chat>button.maximize:focus:not(:active), .minimizable-web-chat>button.maximize:hover:not(:active) {
   background-color: White;
   border-color: #112D70;
-  color:#112D70
+  color: #112D70
 }
 
-.minimizable-web-chat > button.maximize:active {
+.minimizable-web-chat>button.maximize:active {
   background-color: White;
   border-color: #112D70;
-  color:#112D70
+  color: #112D70
 }
 
-.minimizable-web-chat > .chat-box {
+/* .minimizable-web-chat>.chat-box {
   background-color: rgba(255, 255, 255, .8);
   backdrop-filter: blur(10px);
   border-radius: 2px;
@@ -45,30 +44,98 @@
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  min-width: 400px;
+  min-width: 280px;
   position: fixed;
   top: 20px;
-  width: 30%;
+  width: 40%;
+} */
+
+@media only screen and (max-width: 500px) {
+  /* For mobile Phones: */
+  .minimizable-web-chat>.chat-box {
+    background-color: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(10px);
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border: 1px solid #112D70;
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+  }
 }
 
-.minimizable-web-chat > .chat-box.hide {
+@media only screen and (min-width: 500px) {
+  /* For tablets: */
+  .minimizable-web-chat>.chat-box {
+    background-color: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(10px);
+    border-radius: 2px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border: 1px solid #112D70;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .minimizable-web-chat>.chat-box {
+    width: 450px;
+    /* height: 700px; */
+    background-color: rgba(255, 255, 255, .8);
+    /* border-radius: 2px; */
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, .2); */
+    border: 1px solid #112D70;
+    top: 170px !important;
+    bottom: 20px !important;
+  }
+}
+
+.minimizable-web-chat>.chat-box.hide {
   display: none;
 }
 
-.minimizable-web-chat > .chat-box.left {
+.minimizable-web-chat>.chat-box.left {
   left: 20px;
 }
 
-.minimizable-web-chat > .chat-box.right {
+.minimizable-web-chat>.chat-box.right {
   right: 20px;
 }
 
-.minimizable-web-chat > .chat-box > header {
-  background-color: #ffffff;/* head of chat box */
-  height: 100px;
-  display: flex;
+.minimizable-web-chat>.chat-box>header {
+  /* head of chat box */
+  background-color: #282E3E;
+  min-height: 230px !important;
+  text-align: center;
+}
+/* .webchat__basic-transcript__scrollable{
+  background: #551a1a;
+} */
+.webchat__basic-transcript__transcript{
+  border-radius: 25px 25px 0px 0px;
+  /* background: #ca4a4a; */
+  margin-top: 20px;
 }
 
+.webchat__bubble__content{
+  font-family: Proxima Nova;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-size: 12px;
+  padding:2px 2px 0px 2px
+}
 /* .minimize {
   background-color: Transparent !important;
 }
@@ -76,6 +143,7 @@
 .switch {
   background-color: Transparent !important;
 } */
+
 /* .minimizable-web-chat > .chat-box > header > .filler {
   flex: 0 10000 100%;
 } */
@@ -102,7 +170,3 @@
 .minimizable-web-chat > .chat-box > .react-web-chat {
   flex: 1;
 } */
-
-.bgimg {
-  background-image: url('./minimizeIcon.png');
-}
