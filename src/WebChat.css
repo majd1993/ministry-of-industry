@@ -72,6 +72,13 @@
   border-radius: 16px !important;
 }
 
+.main{
+  padding: 5px;
+  margin:15px;
+  border:1px solid #ADABAC !important;
+  border-radius: 10px;
+}
+
 .ac-adaptiveCard {
   background: white !important;
   color: #878787 !important;
