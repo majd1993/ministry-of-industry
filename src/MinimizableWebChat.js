@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, { useCallback, useMemo, useState } from 'react';
 import { createStore, /* createStyleSet */ } from 'botframework-webchat';
 import Typography from '@material-ui/core/Typography';
-import ListItem from '@material-ui/core/ListItem';
+// import ListItem from '@material-ui/core/ListItem';
 import { makeStyles } from '@material-ui/core/styles';
 
 import IconButton from '@material-ui/core/IconButton';
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     right: '50px',
   },
   messageCloudHeader: {
-    margin: '35px 0px 10px 20px ',
+    margin: '15px 0px 10px 40px ',
     width: '60px',
     height: '60px',
   },
@@ -190,23 +190,27 @@ const MinimizableWebChat = (props) => {
         // <div className={classNames(side === 'left' ? 'chat-box left' : 'chat-box right', minimized ? 'hide' : '')}> 
         <div className={classNames('chat-box right', minimized ? 'hide' : '')}>
           <header>
-            <ListItem style={{ padding: '0px' , left:'42%'}}>
+            {/*  <ListItem style={{ padding: '0px' , left:'42%'}}>
+              
+              
+            </ListItem> */}
+            <div>
+              <IconButton
+                onClick={handleMinimizeButtonClick}
+                style={{ margin: '10px 10px 0px 0px', padding: '0px 0px 0px 0px',float:'right'  }}
+              >
+                {React.createElement(
+                  Icons['Close'], { style: { color: '#ffffff', fontSize: '24px' } }//{ className: classes.groupTitleLeftIcon },
+                )}
+              </IconButton>
+            </div>
+            <div>
               <img
                 src={MessageCloud}
                 alt={''}
                 className={classes.messageCloudHeader}
               />
-              <IconButton
-                onClick={handleMinimizeButtonClick}
-                style={{ margin: '-50px 0px 0px 100px' }}
-              >
-                {React.createElement(
-                  Icons['Close'], { style: { color: '#ffffff',fontSize:'24px'} }//{ className: classes.groupTitleLeftIcon },
-                )}
-              </IconButton>
-            </ListItem>
-
-
+            </div>
             <Typography className={classes.title1} >
               {'Wael'}
             </Typography>
