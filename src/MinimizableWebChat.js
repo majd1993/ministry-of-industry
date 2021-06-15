@@ -197,7 +197,7 @@ const MinimizableWebChat = (props) => {
             <div>
               <IconButton
                 onClick={handleMinimizeButtonClick}
-                style={{ margin: '10px 10px 0px 0px', padding: '0px 0px 0px 0px',float:'right'  }}
+                style={{ margin: '10px 10px 0px 0px', padding: '0px 0px 0px 0px', float: 'right' }}
               >
                 {React.createElement(
                   Icons['Close'], { style: { color: '#ffffff', fontSize: '24px' } }//{ className: classes.groupTitleLeftIcon },
@@ -217,47 +217,8 @@ const MinimizableWebChat = (props) => {
             <Typography className={classes.title2} >
               {'Your MOIAT Digital Assistant'}
             </Typography>
-            {/* <div className="filler" /> */}
-            {/* <ListItem style={{ padding: '0px' }}>
-              <div>
-                <Typography className={classes.title1} >
-                  {'Wael'}
-                </Typography>
-                <Typography className={classes.title2} >
-                  {'Your MoIAT digital assistant'}
-                </Typography>
-              </div>
-              <Typography className={classes.emptyMainTypography} ></Typography>
-
-              <IconButton
-                onClick={handleMinimizeButtonClick}
-                className={classes.headerIconButton}
-              >
-                {React.createElement(
-                  Icons['Remove'], //{ className: classes.groupTitleLeftIcon },
-                )}
-              </IconButton>
-              {/* <IconButton
-                onClick={handleSwitchButtonClick}
-                className={classes.headerIconButton}
-              >
-                {React.createElement(
-                  Icons['SwapHoriz'], { className: classes.groupTitleLeftIcon },
-
-                )}
-              </IconButton> */}
-            {/* <button className="switch" onClick={handleSwitchButtonClick}>
-                <span className="ms-Icon ms-Icon--Switch" />
-              </button>
-              <button className="minimize" onClick={handleMinimizeButtonClick}>
-                <span className="ms-Icon ms-Icon--ChromeMinimize" />
-              </button> }
-              <img
-                src={AvatarIcon}
-                alt={''}
-                className={classes.avatarIcon}
-              />
-            </ListItem> */}
+            <div style={{ height: '20px', background: '#f5f5f5', bottom: '0px', marginTop: '35px', borderRadius: '20px 20px 0px 0px' }}>
+            </div>
           </header>
           <WebChat
             className="react-web-chat"
