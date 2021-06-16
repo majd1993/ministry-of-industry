@@ -56,42 +56,41 @@
 }
 
 .webchat__adaptive-card-renderer {
-  border: 2px solid #0b3b5d;
-  border-radius: 2px;
-}
-
-.webchat__adaptive-card-renderer {
-  background: white !important;
+  /* border: 1px solid #D4B678; */
+  background: transparent !important;
   color: #878787 !important;
   border-radius: 16px !important;
 }
 
-.ac-container {
-  background: white !important;
-  color: #878787 !important;
-  border-radius: 16px !important;
-}
-
-.main{
+.main {
   padding: 5px;
-  margin:15px;
-  border:1px solid #ADABAC !important;
+  margin: 15px;
+  border: 1px solid #ADABAC !important;
   border-radius: 10px;
 }
 
+.ac-container {
+  background: transparent !important;
+  color: #878787 !important;
+  border-radius: 16px !important;
+}
+
 .ac-adaptiveCard {
-  background: white !important;
+  background: transparent !important;
   color: #878787 !important;
   border-radius: 16px !important;
 }
 
 .roula .ac-pushButton {
   /* Arabic */
-  color: #0b3b5d !important;
+  color: #ffffff !important;/* #070707 */
+  /* text-decoration-line: underline; */
   display: block !important;
-  font-size: 14px;
-  /* background: #245BB2 !important; */
-  border: 0px solid #245BB2 !important;
+  font-size: 16px;
+  /* font-family: 'ADNOC' !important; */
+  font-weight: 400 !important;
+  background: #D4B678 !important;
+  border: 2px solid #D4B678 !important;
   text-align: right !important;
   padding: 5px;
   /* border-radius: 8px !important; */
@@ -99,13 +98,17 @@
 
 .ac-pushButton {
   /* English */
-  color: #0b3b5d !important;
-  /* #a8b4c9 */
+  color: #ffffff !important;/* #070707 */
+  /* text-decoration-line: underline; */
   justify-content: start !important;
-  font-size: 11px;
-  /* background: #245BB2 !important; */
-  border: 0px solid #245BB2 !important;
-  padding: 5px;
+  font-size: 15px;
+  /* font-family: 'Proxima Nova Regular'; */
+  font-weight: 400 !important;
+  background: #D4B678 !important;
+  border: 2px solid #D4B678 !important;
+  border-radius: 10px;
+  text-align: left !important;
+  height: 35px;
   /* border-radius: 8px !important; */
 }
 
@@ -113,10 +116,20 @@
   text-align: right;
 }
 
-.ac-textBlock {
-  font-size: 16px!important;
+.roula .ac-textBlock {
+  font-size: 16px !important;
+  /* font-family: 'ADNOC' !important; */
   margin-top: 1px;
-  color: #0b3b5d !important;
+  color: #070707 !important;
+  font-weight: 400 !important;
+}
+
+.ac-textBlock {
+  font-size: 16px !important;
+  /* font-family: 'Proxima Nova Regular' !important; */
+  margin-top: 1px;
+  color: #070707 !important;
+  font-weight: 400 !important;
 }
 
 .ac-input {
@@ -141,4 +154,62 @@
   margin-left: -40px !important;
   height: 100% !important;
   background-color: #ffffff;
+}
+
+/* .webchat__bubble__content {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-size: 12px;
+  padding: 2px 4px 0px 4px
+} */
+
+.roula .markdown {
+  /* font-family: 'ADNOC' !important; */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-size: 14px;
+  padding: 6px 8px 0px 8px;
+}
+
+.roula .plain {
+  /* font-family: 'ADNOC' !important; */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-size: 14px;
+  padding: 6px 8px 0px 8px;
+}
+
+.markdown {
+  /* font-family: 'Proxima Nova Regular' !important; */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-size: 14px;
+  padding: 2px 4px 0px 4px
+}
+
+.plain {
+  /* font-family: 'Proxima Nova Regular' !important; */
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-size: 14px;
+  padding: 2px 4px 0px 4px
+}
+
+.webchat__stacked-layout__status {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0em;
+  font-size: 12px;
+  padding: 2px 4px 0px 4px
 }

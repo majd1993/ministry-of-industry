@@ -112,38 +112,48 @@
 
 .minimizable-web-chat>.chat-box.left {
   left: 20px;
+  background: #282E3E;
 }
 
 .minimizable-web-chat>.chat-box.right {
   right: 20px;
+  background: #282E3E;
 }
 
 .minimizable-web-chat>.chat-box>header {
   /* head of chat box */
   background-color: #282E3E;
-  min-height: 210px !important;
+  min-height: 190px !important;
   text-align: center;
 }
 
-/* .webchat__basic-transcript__scrollable{
-  background: #551a1a;
-} */
+.react-web-chat {
+  border-radius: 25px 25px 0px 0px;
+  background: #F5F5F5;
+}
+
+.webchat__basic-transcript {
+  border-radius: 25px 25px 0px 0px;
+  background: #F5F5F5;
+}
+
+.webchat__basic-transcript__scrollable {
+  border-radius: 25px 25px 0px 0px;
+  background: #F5F5F5;
+}
 
 .webchat__basic-transcript__transcript {
   border-radius: 25px 25px 0px 0px;
-  /* background: #ca4a4a; */
-  margin-top: 20px;
+  background: #F5F5F5;
 }
 
-.webchat__bubble__content {
-  font-family: Proxima Nova;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0em;
-  font-size: 12px;
-  padding: 2px 2px 0px 2px
+/*
+
+ .webchat__basic-transcript__filler {
+  background: #282E3E;
 }
+
+*/
 
 /* .minimize {
   background-color: Transparent !important;

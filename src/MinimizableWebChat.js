@@ -21,14 +21,14 @@ const useStyles = makeStyles((theme) => ({
   },
   title1: {
     margin: '0px 0px 0px 20px',
-    fontFamily: 'Proxima Nova, sans-serif',
+    fontFamily: 'Proxima Nova Regular, sans-serif',
     fontSize: '27px',
     color: '#FFFFFF',
     fontWeight: '700',
   },
   title2: {
     margin: '5px 0px 5px 20px',
-    fontFamily: 'Proxima Nova, sans-serif',
+    fontFamily: 'Proxima Nova Regular, sans-serif',
     fontSize: '15px',
     color: '#FFFFFF', //'#C2C2C2',
     fontWeight: '200',
@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
     right: '50px',
   },
   messageCloudHeader: {
-    margin: '15px 0px 10px 40px ',
+    margin: '20px 0px 10px 40px ',
     width: '60px',
     height: '60px',
   },
@@ -200,7 +200,7 @@ const MinimizableWebChat = (props) => {
                 style={{ margin: '10px 10px 0px 0px', padding: '0px 0px 0px 0px', float: 'right' }}
               >
                 {React.createElement(
-                  Icons['Close'], { style: { color: '#ffffff', fontSize: '24px' } }//{ className: classes.groupTitleLeftIcon },
+                  Icons['Remove'], { style: { color: '#ffffff', fontSize: '24px' } }//{ className: classes.groupTitleLeftIcon },
                 )}
               </IconButton>
             </div>
@@ -212,13 +212,12 @@ const MinimizableWebChat = (props) => {
               />
             </div>
             <Typography className={classes.title1} >
-              {'Wael'}
+              {'Saed'}
             </Typography>
             <Typography className={classes.title2} >
               {'Your MOIAT Digital Assistant'}
             </Typography>
-            <div style={{ height: '20px', background: '#f5f5f5', bottom: '0px', marginTop: '35px', borderRadius: '20px 20px 0px 0px' }}>
-            </div>
+            {/* <div style={{ height: '20px', background: '#f5f5f5', bottom: '0px', marginTop: '35px', borderRadius: '20px 20px 0px 0px' }}></div> */}
           </header>
           <WebChat
             className="react-web-chat"
