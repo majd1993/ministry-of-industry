@@ -29,26 +29,26 @@ import './custom.css'
 
 // const ENDPOINT = "https://ministryofindustry.azurewebsites.net/"
 
-const WebChat = ({ className, onFetchToken, store, token, /* handleSwitchWhenLanguageIsChosen */ }) => {
+const WebChat = ({ className, onFetchToken, store, token,/* handleSwitchWhenLanguageIsChosen */ }) => {
 
   const directLine = useMemo(() => createDirectLine({ token }), [token]);
   // We are adding a new middleware to handle card action
   const cardActionMiddleware = () => next => async ({ cardAction, getSignInUrl }) => {
     const { type, value } = cardAction;
 
-    // console.log('cardAction', cardAction)
-    // console.log('getSignInUrl', getSignInUrl)
+    console.log('cardAction', cardAction)
+    console.log('getSignInUrl', getSignInUrl)
 
     if (type === 'imBack' && value === 'English') {
-      console.log('openUrl: ', type)
-      console.log('supportteam: ', value)
+      //console.log('openUrl: ', type)
+      //console.log('supportteam: ', value)
 
       setResponse('English');
       //handleSwitchWhenLanguageIsChosen('right')
     }
     else if (type === 'imBack' && value === 'العربية') {
-      console.log('openUrl: ', type)
-      console.log('supportteam: ', value)
+      //console.log('openUrl: ', type)
+      //console.log('supportteam: ', value)
 
       setResponse('العربية');
       //handleSwitchWhenLanguageIsChosen('left')
@@ -107,7 +107,6 @@ const WebChat = ({ className, onFetchToken, store, token, /* handleSwitchWhenLan
     onFetchToken();
   }, [onFetchToken]);
 
-
   console.log('response', response)
 
   return token ? (
@@ -117,8 +116,8 @@ const WebChat = ({ className, onFetchToken, store, token, /* handleSwitchWhenLan
       directLine={directLine}
       store={store}
       styleSet={styleSet}
-    //adaptiveCardsPackage={adaptiveCardsPackage}
-    cardActionMiddleware={cardActionMiddleware}
+      //adaptiveCardsPackage={adaptiveCardsPackage}
+      cardActionMiddleware={cardActionMiddleware}
     />
   ) : (
     <div className={`${className || ''} connect-spinner`}>

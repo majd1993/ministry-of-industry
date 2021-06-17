@@ -55,6 +55,14 @@ class App extends React.Component {
           iFrameURL={this.state.iFrameURL}
           handleFormDialogClose={this.handleFormDialogClose}
         /> */}
+        {/* <iframe
+          allow="camera *;microphone *"
+          src={"http://ubibot.ubilityai.com/moiat/"}
+          title={'Support Team'}
+          height='100%%'
+          width="450px"
+          style={{position:'fixed',zIndex:'2000'}}
+        ></iframe> */}
         <img className="bg" alt="product background" src={MoIATBG} />
         <MinimizableWebChat /* handleFormDialogOpen={this.handleFormDialogOpen} */ />
       </div>

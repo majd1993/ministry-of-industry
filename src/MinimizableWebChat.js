@@ -89,14 +89,6 @@ const MinimizableWebChat = (props) => {
     []
   );
 
-  /* const styleSet = useMemo(
-    () =>
-      createStyleSet({
-        backgroundColor: 'Transparent',
-      }),
-    []
-  ); */
-
   const [loaded, setLoaded] = useState(false);
   const [minimized, setMinimized] = useState(true);
   //const [newMessage, setNewMessage] = useState(false);
@@ -151,49 +143,26 @@ const MinimizableWebChat = (props) => {
   //       When minimized, we still want to maintain that connection while the UI is gone.
   //       This is related to https://github.com/microsoft/BotFramework-WebChat/issues/2750.
 
+
+  console.log('minimized', minimized)
+  console.log('loaded', loaded)
+  // console.log('token', token)
+  // console.log('store', store)
+
   return (
     <div className="minimizable-web-chat">
       {minimized && (
-        <>
-          {/* <div
-            className={classes.messageCloud}
-            style={{
-              backgroundImage: `url(${MessageCloud})`
-            }}>
-            <img
-              src={MessageIcon}
-              alt={''}
-              className={classes.messageIcon}
-              onClick={handleMaximizeButtonClick}
-            />
-          </div> */}
-
-          <img
-            src={MessageCloud}
-            alt={''}
-            className={classes.messageCloud}
-            onClick={handleMaximizeButtonClick}
-          />
-        </>
-        /* <img
-          src={MinimizeIcon}
+        <img
+          src={MessageCloud}
           alt={''}
-          className={classes.minimizeIcon}
+          className={classes.messageCloud}
           onClick={handleMaximizeButtonClick}
-        /> */
-        /* <button className="maximize" onClick={handleMaximizeButtonClick}>
-          <span className={token ? 'ms-Icon ms-Icon--MessageFill' : 'ms-Icon ms-Icon--Message'} />
-          {newMessage && <span className="ms-Icon ms-Icon--CircleShapeSolid red-dot" />}
-        </button> */
+        />
       )}
       {loaded && (
         // <div className={classNames(side === 'left' ? 'chat-box left' : 'chat-box right', minimized ? 'hide' : '')}> 
         <div className={classNames('chat-box right', minimized ? 'hide' : '')}>
           <header>
-            {/*  <ListItem style={{ padding: '0px' , left:'42%'}}>
-              
-              
-            </ListItem> */}
             <div>
               <IconButton
                 onClick={handleMinimizeButtonClick}
@@ -217,15 +186,12 @@ const MinimizableWebChat = (props) => {
             <Typography className={classes.title2} >
               {'Your MOIAT Digital Assistant'}
             </Typography>
-            {/* <div style={{ height: '20px', background: '#f5f5f5', bottom: '0px', marginTop: '35px', borderRadius: '20px 20px 0px 0px' }}></div> */}
           </header>
           <WebChat
             className="react-web-chat"
             onFetchToken={handleFetchToken}
             store={store}
             token={token}
-          //styleSet={styleSet}
-          //handleSwitchWhenLanguageIsChosen={handleSwitchWhenLanguageIsChosen}
           />
         </div>
       )}
